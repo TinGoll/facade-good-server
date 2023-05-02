@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type GalleryImage {
+  destination: String!
+  encoding: String!
+  filename: String!
+  id: ID!
+  index: Float!
+  mimetype: String!
+  originalname: String!
+  path: String!
+  size: Float!
+}
+
+type GalleryItem {
+  category: String!
+  createdAt: String!
+  description: String
+  id: ID!
+  images: [GalleryImage!]
+  index: Float!
+  params: String
+  subtitle: String
+  tag: String
+  title: String!
+  updatedAt: String!
+}
+
+type Query {
+  findAll(category: String, tag: String): [GalleryItem!]!
+}
